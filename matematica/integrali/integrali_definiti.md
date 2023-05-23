@@ -16,7 +16,7 @@
     - **Osservazione:**
         - Se rimpiccioliamo l'intervallo (aumentando N ${\to}$ abbassare ${{\triangle}x}$), $m[i]$ e $M[i]$ si avvicinano [^1] ${\to}$ la somma diventa più precisa ${\to}$ se facciamo N grandissimo, avremo la somma precisa.
 
-    - ### ***${\lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \int_{a}^{b} f(x)}$***
+    - ### ${\lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \int_{a}^{b} f(x)}$
 
 - ## **Proprietà**:
     - Valgono quelle di linearità
@@ -47,39 +47,51 @@
     - Proof:
         - Definizione di derivata:
             - $F'(x) = {\lim_{h\to 0^+} \frac{F(x + h) - F(x)}{h}}$
+            
         - Scegliamo un $h$ tale che valga $a \lt x + h \lt b$
             - ${F(x + h) - F(x)}$
+        
         - Ma $F(x)$ è funzione integrale quindi:    
             - ${F(x + h) - F(x) = \int_{a}^{x + h} f(t)dt - \int_{a}^{x} f(t)dt}$
         - Per la proprietà additività (splittare il range):
             - ${\int_{a}^{x + h} f(t)dt = \int_{a}^{x} f(t)dt + \int_{x}^{x + h} f(t)dt}$
         - Quindi: 
             - ${\int_{a}^{x + h} f(t)dt - \int_{a}^{x} f(t)dt = \int_{x}^{x + h} f(t)dt}$
+          
         - Ma per l'interpretazione geometrica del teorema del valor medio vale:
             - $\int_{x}^{x + h} f(t)dt = f(z) * h$ 
         - ${F(x + h) - F(x) = f(z) * h}$ 
+        
         - Dividiamo per $h$
         - ${\frac{F(x + h) - F(x)}{h} = f(z)}$ 
+        
         - Studiamo il comportamento dell'uguaglianza per $\lim_{h \to 0^+}$
             - ${\lim_{h \to 0^+} \frac{F(x + h) - F(x)}{h} = \lim_{h \to 0^+} f(z)}$
+            
         - Membro destro:
             - essendo che $z \in [x, x+h]$ se ${h \to 0^+}$ allora z tende x da destra quindi:
                 - ${\lim_{h \to 0^+} f(z) = \lim_{z \to x^+} f(z) = f(x)}$
+                
         - Membro sinitro:
             - E' la definizione di derivata
+            
         - Quindi se sostituisco il tutto:
             -  $F'(x) = f(x)$
 
 - **Risoluzione degli integrali definiti**
     - Sia $\phi(x)$ una primitiva qualsiasi di $f(x)$ $\to$ $\phi(x) = F(x) + c$ 
+    
     - Sappiamo però, con il teorema Torricelli Barrow, che $F(x)$ [^7] è una primitiva
+    
     - Definiamo $\phi(a)$:
         - $\phi(a) = F(a) + c = \int_{a}^{a} f(t)dt + c$
         - $\phi(a) = 0 + c$ ${\to}$ $\phi(a) = c$
     
     - Definiamo $\phi(b)$:
         - $\phi(b) = F(b) + c = \int_{a}^{b} f(t)dt + c$
+        
     - Ma $c = \phi(a)$
+    
     - $\phi(b) = \int_{a}^{b} f(t)dt + \phi(a)$ ${\to}$ $\int_{a}^{b} = \phi(b) - \phi(a)$
     
     - Quindi basta trovare una primitiva qualsiasi di $f(x)$ e sostituire $a$ e $b$   
