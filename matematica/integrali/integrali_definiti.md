@@ -22,11 +22,12 @@
     - Valgono quelle di linearità
     - $\int_{a}^{a} f(x) = 0$ [^2] 
     - $\int_{a}^{b} f(x) = \int_{a}^{c} f(x) + \int_{c}^{b} f(x)$  dove $ a \lt c \lt b $ [^3]
-    - se f(x) > g(x) allora $\int_{a}^{b} f(x) \gt  \int_{a}^{b} g(x)$ [^4]
+    - $\int_{a}^{b} f(x) = -\int_{b}^{a} f(x)$ [^4]
+    - se f(x) > g(x) allora $\int_{a}^{b} f(x) \gt  \int_{a}^{b} g(x)$ [^5]
 
 - ## **Teorema del valor medio**
     - Sia f(x) una funzione continua in $[a, b]$ allora esiste almeno un punto $z$ tale che $f(z) * (b - a) = \int_{a}^{b} f(x)$
-    - Si suppone che b > a [^5]
+    - Si suppone che b > a [^6]
     - Proof:
         - sia $m$ il minimo e $M$ il massimo in $[a, b]$
         - allora vale la seguente disuguaglianza:
@@ -35,7 +36,7 @@
             - $(b - a) * m \leq \int_{a}^{b} f(x) \leq (b - a) * M$
         - Dividiamo per $(b - a) \to$ i segni della disequazione non cambia visto che $\gt 0$
             - $ m \leq \frac{1}{b - a}\int_{a}^{b} f(x) \leq M$
-        - Sappiamo che esiste questo valore per il teorema dei valori intermedi [^6]
+        - Sappiamo che esiste questo valore per il teorema dei valori intermedi [^7]
         - Quindi esiste almeno un $z = \frac{1}{b - a}\int_{a}^{b} f(x)$
 
 - ## **Teorema di Torricelli Barrow / teorema calcolo fondamentale**
@@ -82,7 +83,7 @@
 - **Risoluzione degli integrali definiti**
     - Sia $\phi(x)$ una primitiva qualsiasi di $f(x)$ $\to$ $\phi(x) = F(x) + c$ 
     
-    - Sappiamo però, con il teorema Torricelli Barrow, che $F(x)$ [^7] è una primitiva
+    - Sappiamo però, con il teorema Torricelli Barrow, che $F(x)$ [^8] è una primitiva
     
     - Definiamo $\phi(a)$:
         - $\phi(a) = F(a) + c = \int_{a}^{a} f(t)dt + c$
@@ -100,7 +101,8 @@
 [^1]: principio dei due carabinieri
 [^2]: proof: teorema valor medio --> base * altezza = (a - a) * f(z) = 0 * f(z) = 0
 [^3]: proof: pensare somma prefissi
-[^4]: proof: se f(x) > g(x), allora l'area è maggiore
-[^5]: proof: se b < a, allora l'integrale diventa < 0 e i segni disequazioni sono capovolti, quindi mi riconduco ad avere b > a
-[^6]: proof: se voglio tracciare una linea tra minimo e massimo, l'unico modo di non passare per alcune y tra questo range è ammettere punti di discontinuità, ma ciò non può avvenire visto che f(x) è continuo
-[^7]: funzione integrale di f(x)
+[^4]: proof: ${\triangle}x = \frac{b-a}{n}$ ma $(a-b) \lt 0$ perché b > a
+[^5]: proof: se f(x) > g(x), allora l'area è maggiore
+[^6]: proof: se b < a, allora l'integrale diventa < 0 e i segni disequazioni sono capovolti, quindi mi riconduco ad avere b > a
+[^7]: proof: se voglio tracciare una linea tra minimo e massimo, l'unico modo di non passare per alcune y tra questo range è ammettere punti di discontinuità, ma ciò non può avvenire visto che f(x) è continuo
+[^8]: funzione integrale di f(x)
