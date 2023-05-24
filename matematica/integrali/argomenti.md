@@ -1,0 +1,3 @@
+All'interno sono spiegati cosa sono gli integrali definiti, indefiniti e le proprietà. Vengono spiegati i modi di risoluzione (classico, per parti, sostituzione, divione)
+
+Vengono spiegati le dimostrazioni delle cose (teorema della media, teorema fondamentale del calcolo) e inoltre vengono mostrate nel file altro_integrali: il solido di rotazione, calcolo dell'area tra due funzioni e gli integrali impropri. 

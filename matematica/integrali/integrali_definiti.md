@@ -4,19 +4,22 @@
 
 - Consideriamo di avere una funzione positiva e continua in $[a, b]$ e vogliamo calcolare l'area sotto la curva in $[a, b]$
 
+- ## Premessa:
+    - Quando si dice che si cerca il $massimo$ e $minimo$ in un intervallo in $[a, b]$, esiste per il teorema di $Weierstrass$ $\to$ sia una funzione continua in un intervallo chiuso e limitato, allora ammette (almeno) un massimo e minimo assoluto  
+
 - ## **Calcolo stimato**
     - Dividiamo l'intervallo $[a, b]$ in $n$ sottointervalli lunghi ${\triangle}x = \frac{b-a}{b}$   
     - Consideriamo il $m[i]$ come il minimo del sotto-intervallo i-esimo e $M[i]$ come il massimo
     - Creiamo dei sotto-rettangoli di base ${\triangle}x$ e altezza $m[i]$ e un'altro alto $M[i]$. Se li sommiamo avremo due somme:
         - ${\sum_{i=0}^{n} m[i] * {\triangle}x } = s $     
-        - ${\sum_{i=0}^{n} m[i] * {\triangle}x } = S $ 
+        - ${\sum_{i=0}^{n} M[i] * {\triangle}x } = S $ 
     - L'area sotto curva che indicheremo con ${\int_{a}^{b} f(x)}$ e vale questa disugaglianza:
         - ${s \leq {\int_{a}^{b} f(x)} \leq S}$
 
     - **Osservazione:**
         - Se rimpiccioliamo l'intervallo (aumentando N ${\to}$ abbassare ${{\triangle}x}$), $m[i]$ e $M[i]$ si avvicinano [^1] ${\to}$ la somma diventa più precisa ${\to}$ se facciamo N grandissimo, avremo la somma precisa.
 
-    - ### ${\lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \int_{a}^{b} f(x)}$
+    - ### ${\lim_{n\to\infty} \sum_{i=0}^{n} m[i] * {\triangle}x = \lim_{n\to\infty} \sum_{i=0}^{n} M[i] * {\triangle}x = \int_{a}^{b} f(x)}$
 
 - ## **Proprietà**:
     - Valgono quelle di linearità
