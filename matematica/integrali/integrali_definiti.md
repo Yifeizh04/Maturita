@@ -40,9 +40,10 @@
 
 - ## **Teorema di Torricelli Barrow / teorema calcolo fondamentale**
     - ### **funzione integrale**:
-        - sia f(x) una funzione continua in $[a, b]$, allora si definisce funzione integrale di $f(x)$ una funzione $F(x)$ che è **${\int_{a}^{x}f(t)dt}$**
-    - sia $f(x)$ una funzione continua in $[a, b]$ e $f(x)$ la funzione integrale di $f(x)$, allora la derivata di $F(x)$ è $f(x)$.
-        - $F'(x) = f(x) \forall x \in [a, b]$  quindi $F(x) è primitiva di f(x)$
+        - sia f(x) una funzione continua in $[a, b]$, allora si definisce funzione integrale di $f(x)$ una funzione $F(x)$ = **${\int_{a}^{x}f(t)dt}$**
+- **Enunciato**
+    - sia $f(x)$ una funzione continua in $[a, b]$ e $F(x)$ la funzione integrale di $f(x)$, allora esiste la derivata di $F(x)$ per ogni x in [a, b] ed è $f(x)$.
+        - $F'(x) = f(x) \forall x \in [a, b]$  quindi $F(x)$ è $primitiva$ di $f(x)$
 
     - Proof:
         - Definizione di derivata:
