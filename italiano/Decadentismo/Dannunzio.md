@@ -14,6 +14,7 @@
 - **Poetica:**
     - E' un **ESTETA** → considera la sua VITA come un'OPERA D’ARTE
     - **SUPERUOMO**: individuo SUPERIORE capace di rappresentare un mondo migliore. E' talmente superiore che si può fondere con la NATURA (PANISMO)
+    - **Vitalismo:** prevalere concetto di vivere come voglio io (vita autentica) altrimenti vengo schiacciato dalla società di massa 
 - **Opere:**
     - ***LAUDI:*** 
         - Si ispira al Cantico delle Creature
