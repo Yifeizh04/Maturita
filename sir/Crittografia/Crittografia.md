@@ -1,0 +1,26 @@
+- **Tecnica** **per proteggere i dati rendendo un messaggio incomprensibile alle persone non autorizzate**
+- *Per comprendere il significato serve conoscere la chiave (informazione per decriptare le cose) e deve essere conosciuta solo da chi è autorizzato*
+- esistono ***2 tipi***:
+    -  ***simmetrica***: *una chiave per criptare/decifrare* 
+    - ***asimmetrica***: *una chiave per criptare (pubblica), una per decifrare (privata)*
+ - Esempio di simmetrica:
+    - DES:
+        - ricevo testo e chiave da 64 bit (della chiave me ne servono solo 56 --> gli ultimi 8 di ogni byte sono di controllo )
+        - permuto il messaggio inziale 
+        - Divido il messaggio in due blocchi L ed R 
+        - Eseguo fiestel per 16 volte:
+           -  Genero una sub-key (48 bit)
+           -  Blocco E --> espando il blocco R da 32 a 48 così da poter fare la XOR con sub-key --> si può prendere gli ultimi bit della riga prima inserendoli all'inizio di ogni riga 
+           - Blocco F --> si crea MAT = R (espanso) XOR sub-key 
+           - MAT deve passare da 48 a 32 per fare XOR con L --> SBOX (matrice di 4 * 16) --> per ogni riga, si comprime in un numero da 4 bit --> primo e ultimo bit mi dà la riga del SBOX, quelli in mezzo la colonna 
+           - Compresso il tutto, faccio la XOR con L. Quest'ultimo diventa il nuovo blocco R, e il vecchio blocco R diventa il nuovo blocco L. E si riesegue fiestel alternando (per comodità faccio swap(L, R) così lavoro solo con R)
+    - Finito i 16 round, ripermuto nuovamente ed ho il nuovo messaggio 
+ -  RSA 
+    - si scelgono due numeri primi P e Q e definiamo *N=P*Q, e $\phi$ (N) = (P-1)*(Q-1)
+    - si sceglie un certo numero E (chiave pubblica) dove:
+       - E < $\phi$ (N)  e gcd(E, $\phi$ (N)) = 1 (comprimo) 
+   - si sceglie D | (E*D) % $\phi$ (N) = 1 --> D è l'inverso modulare, oltre che essere chiave privata. Sappiamo che esiste questo inverso perché 
+   - criptare: messaggio$^{E}$ mod N = criptato 
+   - decifrare: criptato$^{D}$ mod N = messaggio 
+   - Viceversa non funziona 
+   - 

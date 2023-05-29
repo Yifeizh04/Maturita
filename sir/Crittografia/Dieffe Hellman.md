@@ -1,0 +1,10 @@
+- Come posso creare delle chiavi senza scambiare tra i due host? (Se mando la chiave all'altro tizio, un hacker può intercettarlo e quindi non posso mandare la chiave)
+- Devo mandare delle informazioni in maniera da creare una chiave in comune tra i due (simmetrica) senza fare in modo, che chi intercetta i messaggi lo capisca 
+- Dieffe Hellman:
+	- Supponiamo di avere questa situazione: A, B (host) e C (hacker) 
+	- A e B si mettono d'accordo di scegliere due numeri G e P dove P é Primo. Questi due numeri lo conoscono tutti --> si trasmette nel canale. La formula che si usa sarà       ***G$^{a}$ mod P*** . Generalmente si scelgono G e P grandi per evitare attacchi bruteforce. 
+	- Adesso **A**  e **B** scelgono un proprio valore segreto che non lo comunicano tra di loro ed è *a*. Sostituiscono questo valore alla formula di sopra e il risultato se lo condividono. 
+	- N1 = ***G$^{a_A}$ mod P*** 
+	- N2 = ***G$^{a_B}$ mod P***
+	- L'hacker conosce N1, N2 ma non i valori ${a_A}$, ${a_B}$ che solo A e B conoscono (neanche loro sanno quello dell'altro visto che non possono mandarselo).
+	- Una volta che si mandano N1, N2, ognuno si calcola la chiave segreta per criptare e si calcola con                      ***N2$^{a_A}$ mod P = N1$^{a_B}$ mod P*** . 

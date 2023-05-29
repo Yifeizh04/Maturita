@@ -1,0 +1,13 @@
+- Access control list 🛂 
+- È un insieme di regole che permette/nega l'accesso a qualcosa (permit e deny)
+- Ciò viene applicato nel router in particolare nelle interfacce specificando se è di entrata o uscita
+- Si usa un numero per identificarlo e lo classifica:
+    - numero $\in$ [1, 99] o [1300, 1999] --> standard 
+          - si basa solo sull'IP sorgente 
+    - numero $\in$ [100, 199] o [2000, 2699] --> estese
+          - si basa sull'IP sorgente e destinazione 
+- Non viene solo utilizzato solo nel campo degli IP ma anche per i protocolli (come http, pop3, ecc...) e porte 
+- Generalmente quando si scelgono gli indirizzi IP nelle ACL, sostanzialmente si sta facendo un Wildcard.  
+- ## Wildcard 
+    - È una maschera che ci permette, in base all'IP di partenza, di decidere quali IP possono / non possono entrare. Può essere visto come l'opposto della maschera di rete. 
+    - Se ho un indirizzo di partenza A, e ho una Wildcard, un indirizzo B può "passare" $\iff$ $\forall$ i | Wildcard[i] = 0,  A[i] = B[i] 

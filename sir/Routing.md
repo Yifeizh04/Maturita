@@ -1,0 +1,58 @@
+- tecnica che lavora nel 3 livello (rete) e consiste nel instradare i pacchetti in maniera di farlo arrivare in destinazione scegliendo un cammino ottimale. Questi cammini vengono calcolati usando certi algoritmi e il loro risultato vengono salvati in delle tabelle di routing.
+- È svolto dal router 
+- Esistono 2 classificazioni di routing:
+      -  __statici/link state__: ogni router conosce l'intera tipologia della rete --> per calcolare il cammino ottimale si usa Dijkstra  --> O(N*logM)
+      - __dinamici/distance vector__: ogni router conosce solo i vicini --> per calcolare il cammino ottimale si usa Bellman-ford --> O(N*M)
+      - differenze:
+            -  Link state è più veloce e non ha problemi di formazione dei loop. Usa più memoria --> tutti i nodi devono conoscere l'intera tipologia. Dijkstra richiede creare array, priority queue 
+            - Distance vector usa molta meno memoria --> ogni nodo conosce solo i vicini, e per Bellford richiede solo la lista archi. Ha il problema che si possono formare loop.
+- Protocolli routing:
+     -  **Statici**:
+           -   OSPF:
+                 - Open shortest path first 
+                 - Nozioni:
+                      -   LSDB (Link state database) --> vengono salvati le informazioni 
+                      -   LSA (Link state advertisment) --> pacchetti che si scambiano 
+                      -   LSACK (Link state ack)
+                      -   LSU (Link state update)
+                      -   LSR (Link state request)
+                - Funzionamento: ogni router conosce l'intera tipologia ed ha un proprio LSDB. I step sono:
+                      -  diventare vicini: un router manda un messaggio ad un vicino. Se il destinatario risponde a sua volta con un messaggio, diventano vicini. Se entro un TOT di tempo non risponde, si assume che sia morto il vicino.
+                      - Diventati vicini, si popola la tabella e ogni router, controlla se il vicino ha un percorso migliore per una certa destinazione. Se sì, manda una richiesta (LSR), e il destinatario risponde con un LSU per aggiornare la tabella (per avvertire della ricezione mando un LSACK). 
+                -  Questo protocollo è meglio rispetto ad un Link state normale perché consente di dividere in aree la rete --> pochi router devono conoscere tutta la rete. 
+                  (nel confine) -->  meno memoria, e si esegue Dijkstra su un grafo più piccolo
+     - Dinamici:
+            - **RIP**
+                -   Routing Information protocol 
+                -   Oltre alle caratteristiche di un distance vector, usa il numero di hop come metrica --> non è ottimo per calcolare il percorso migliore 
+                - Viene usato nelle rete piccole:
+                    - Per fixare i problemi di loop del distance vector, si mette un limite di 15 hop per arrivare alla rete --> limita grandezza rete 
+                    - ogni 30 secondi si manda la propria tabella ai vicini (se è grande, c'è molto traffico molte volte inutile(non c'è update))
+                - Ci sono 2 versioni:
+                    - 1) non supporta il VLSM 
+                    - 2) supporta il VLSM 
+                - Vantaggio:
+                    -  Facile da implementare (l'unica metrica è hop)
+                - Svantaggio:
+                    - Grandezza rete limitata 
+                    - Cammini poco ottimali rispetto OSPF e altri (più "lento") 
+            - **IGRP**:
+               - Interiore Gateway routing protocol, creato dalla Cisco 
+               - è un algoritmo distance vector 
+               - è la versione avanzata del rip:
+                    -  Aggiorna i vicini ogni 90 secondi 
+                    - Il massimo hop è 255
+                    - Supporta varie metriche per il SP: 
+                         - ritardo 
+                         - larghezza banda 
+                         - carico 
+             -  EIGRP:
+                - Enhanced IGRP (versione pro) 
+                -  Usa le stesse metriche IGRP e consente il VLSM
+                - Diventa per metà statico --> funzionamento per la popolazione delle tabelle è uguale OSPF 
+                - Usa 3 tabelle:
+                   -  tabella dei vicini (informazioni router adiacenti)
+                   -  tabella topologia (contiene i possibili successori (2 best path), eventualmente c'è un feasible successor (successore del successore / 3 best SP) 
+                   - tabelle routing: contiene percorsi migliori 
+          -  svantaggi del IGRP e EIGRP: implementati solo su dispositivi Cisco 
+

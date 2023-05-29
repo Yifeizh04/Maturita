@@ -1,0 +1,20 @@
+- Virtual private network 
+- É stato creato per trasferire i dati in maniera sicura tra due aziende molto distanti --> Miami e Milano, non posso creare un cavo così lungo e mi tocca inviare informazioni su internet (poco safe ) --> uso la VPN
+- Viene applicata il ***tunneling*** che consiste nel incapsulare i nostri pacchetti in maniera da avere una comunicazione più sicura su una rete pubblica 
+- È sicuro per 2 motivi:
+	- i dati che passano in questo "tunnel" sono criptati e il tunnel stesso è criptato (doppia sicurezza) 
+	- Nel caso si dovesse rompere il tunnel, si interrompe la connessione e viene creato un'altro tunnel 
+	- la VPN consente l'accesso di alcune risorse in maniera sicura (è come se quest'ultime sono nella stessa rete)
+- Tipologie di VPN:
+	- ***VPN di accesso remoto***: 
+		- consente l'accesso remoto ad una singola rete in maniera sicura (dal PC accedere alle risorse della azienda)
+	- ***VPN da sito a sito***:
+		- viene creata una connessione tra due reti --> si può accedere alle risorse dell'altra rete in maniera sicura (è come se fosse nella stessa)
+- Protocolli VPN:
+	- OPENVPN --> usa protocolli del SSL/TLS 
+	- IPSec --> incapsulare i pacchetti in dei nuovi pacchetti 
+- Come funziona?
+	- Si creano delle chiavi per criptare/decifrare e se li scambiano     con [[Dieffe Hellman]]. 
+	- Avviene l'autenticazione 
+	- Avendo le chiave poi si cifra con AES i messaggi 
+	- Alcune volte si comprime documento per allegerire --> hashing (SHA-2)

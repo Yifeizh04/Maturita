@@ -1,0 +1,49 @@
+- ***Transfer control protocol ***
+- Sono dei protocolli che si basano sulla connessione orientata --> si deve creare una connessione per comunicare --> handshake 
+- il pacchetto che si manda si chiama segmento ed ha un header di 20 byte (ci sono dei campi per controlli)
+- È più sicuro perché garantisce che il pacchetto arrivi --> *stop and wait* 🛑 --> aspetto ack quando mando, se non ricevo niente, rimando 
+- ### handshake 🤝
+	- inizio: 3 way handshake 
+		- il mittente manda un messaggio al server (o qualcun'altro) di creare una connessione --> setto il flag sync = 1
+		- il server, se vuole, risponde al client con un segmento settando il flag sync=1 e ack=1 (richiesta connessione e conferma ricezione)
+		- qui la connessione si è creata e risponde con un segmento con flag ack=1 
+	- Chiusura: 4 way handshake 
+		- Funzionamento simile al 3 way ma viene settato il flag fin = 1. 
+		- ==⚠️== per chiudere la connessione, serve che entrambi chiudono 
+- Protocolli: 
+	- HTTP:
+		- Hyper text transfer protocol ed è stato creato CERN nel 1980
+		- È un protocollo che lavora nel livello applicativo e serve per trasmettere le informazioni sul web (accedere ai siti 🌐)
+		- Usa la porta 80 
+		- Esiste https --> versione sicura del http (usa la porta 443)
+		- Esistono 5 versioni del http:
+			1. 0.9 - 1.0:
+				- Sono semplici --> hanno pochi metodi GET, POST
+				- ***Connessione non*** ***persistente*** : ogni volta che si vuole mandare un pacchetto, si apre e si chiude la connessione (ogni volta si rifà handshake 🤝)
+			2. 1.1: 
+				- La ***connessione***  è ***persistente*** ***(keep-alive)***: la connessione non viene abbattuta ad ogni messaggio --> chiudo la connessione se c'è un'attività per un lasso di tempo ⌚
+				- Viene introdotto il **pipelining** --> inviare più segmenti alla volta, rinviare quelli di cui non ho ACK. Ricevo le risposte nell'ordine delle richieste 
+			2. 2.0:
+				- Più veloce del 1.1
+				- Gestisce le priorità (caricare prima CSS)
+				- Comprime i dati rendendoli più leggeri 
+				- Ha il multiplexing (versione fast pipelining   --> le risposte non arrivano nell'ordine in partenza)
+			- 3.0:
+				- È ancora in via di sviluppo 
+				- Quest'ultimo diventa UDP  --> avere più velocità 
+	- SMTP: 
+		- Simple Mail Transfer Protocol 📨
+		- Procollo che serve per inviare le mail 
+		- Usa la porta 25
+	- POP3:
+		- Post Office Protocol 📬
+		- Protocollo che serve per scaricare e leggere le mail in arrivo (autenticandosi) sul proprio dispositivo 
+		- Usa la porta 110
+	- IMAP:
+		- Internet Message Access Protocol 📬 
+		- Protocollo che serve per scaricare e leggere le mail in arrivo dal server 
+		- Usa la porta 143
+	- Differenza tra IMAP e POP3: 
+		- POP3 non consente la sincronizzazione --> se una mail lo scarico da un PC, da un'altro non lo vedo (IMAP si può visto che è nel server )
+		- IMAP usa molto più memoria perché nel server si accumulano informazioni --> nel pop3 li rimuovo e li salvo nel PC 
+
