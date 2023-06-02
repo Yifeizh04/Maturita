@@ -1,3 +1,4 @@
+# Crittografia
 - **Tecnica** **per proteggere i dati rendendo un messaggio incomprensibile alle persone non autorizzate**
 - *Per comprendere il significato serve conoscere la chiave (informazione per decriptare le cose) e deve essere conosciuta solo da chi è autorizzato*
 - **Caratteristiche di una crittografia sicura**

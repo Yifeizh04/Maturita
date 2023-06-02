@@ -1,20 +1,32 @@
 - Virtual private network 
-- É stato creato per trasferire i dati in maniera sicura tra due aziende molto distanti --> Miami e Milano, non posso creare un cavo così lungo e mi tocca inviare informazioni su internet (poco safe ) --> uso la VPN
+- É stato creato per trasferire i dati in maniera sicura tra due aziende molto distanti --> Miami e Milano, non posso creare un cavo così lungo e mi tocca inviare informazioni su internet (sfruttare un'infrastruttura esistente ma poco sicuro) $\to$ uso la VPN $\to$ creare un'unica rete privata tra le due aziende ma in realtà non esiste (virtuale)
 - Viene applicata il ***tunneling*** che consiste nel incapsulare i nostri pacchetti in maniera da avere una comunicazione più sicura su una rete pubblica 
-- È sicuro per 2 motivi:
+- È sicuro:
 	- i dati che passano in questo "tunnel" sono criptati e il tunnel stesso è criptato (doppia sicurezza) 
-	- Nel caso si dovesse rompere il tunnel, si interrompe la connessione e viene creato un'altro tunnel 
-	- la VPN consente l'accesso di alcune risorse in maniera sicura (è come se quest'ultime sono nella stessa rete)
 - Tipologie di VPN:
 	- ***VPN di accesso remoto***: 
-		- consente l'accesso remoto ad una singola rete in maniera sicura (dal PC accedere alle risorse della azienda)
+		- consente l'accesso remoto ad una singola rete in maniera sicura (dal PC accedere alle risorse della azienda). 
 	- ***VPN da sito a sito***:
-		- viene creata una connessione tra due reti --> si può accedere alle risorse dell'altra rete in maniera sicura (è come se fosse nella stessa)
-- Protocolli VPN:
-	- OPENVPN --> usa protocolli del SSL/TLS 
-	- IPSec --> incapsulare i pacchetti in dei nuovi pacchetti 
-- Come funziona?
-	- Si creano delle chiavi per criptare/decifrare e se li scambiano     con [[Dieffe Hellman]]. 
-	- Avviene l'autenticazione 
-	- Avendo le chiave poi si cifra con AES i messaggi 
-	- Alcune volte si comprime documento per allegerire --> hashing (SHA-2)
+		- viene creata una connessione tra due reti $\to$ si può accedere alle risorse dell'altra rete in maniera sicura (è come se fosse nella stessa)
+- **Protocolli VPN:**
+	- **L2TP:**
+		- Layer 2 Tunnel Protocol
+		- utilizzato solo per stabilire connessioni VPN (non è sicuro da solo)
+	- **IPSec:**
+		- Integra le funzionalità di autenticazione e crittografia
+		- Viene abbinato con L2TP
+	
+	- **TLS:**
+		- Transport Layer Security (Predecessore SSL)
+		- funzionamento è uguale al IPSEC
+
+	- Come funziona?
+		- Si stabilisce la connessione 
+		- Si creano delle chiavi per criptare/decifrare e se li scambiano   con Dieffe Hellman. 
+		- Divide il messaggio in blocchi e si va ad incapsularli nascondere l'header del pacchetto (nascondo l'IP sorgente)
+		- Avviene l'autenticazione per confermare chi sta mandando le informazioni se è un malitenzionato o meno
+		- Avendo le chiave poi si cifra con AES i messaggi 
+
+	- Differenza tra TLS e IP-SEC:
+		- TLS: 4 livello (usato quando abbiamo client-server)
+		- IP-SEC: 3 livello (usato tra due end-point)

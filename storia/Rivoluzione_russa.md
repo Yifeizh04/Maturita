@@ -1,5 +1,5 @@
 - ## Introduzione
-	- Sitauzione crisi e malcontento popolo [1^] $\to$ rivoluzione febbraio nel 1917
+	- Sitauzione crisi e malcontento popolo [^1] $\to$ rivoluzione febbraio nel 1917
 	- Lo zar Nicola II viene abdicato $\to$ instaurato governo provvisorio guidato L'vov 
 	- Nasce partito socialista divisi:
 		- Bolscevichi (maggioranza)
@@ -40,6 +40,9 @@
 		- Creano ***Gulag:*** usati eliminare persone contro e avere lavoratori gratis 
 
 
-[1]: C'era crisi agricoltura visto che i soldati erano in guerra e nessuno coltiva. C'erano terre non promesse 
-[2^]: ritorna dall'esilio dall'Austria e diventa capo dei Bolscevichi 
-[3^]: testi dicono passare potere ai soviet, uscire guerra, distribuire le terre
+
+[^1]: C'era crisi agricoltura visto che i soldati erano in guerra e nessuno coltiva. C'erano terre non promesse 
+
+[^2]: ritorna dall'esilio dall'Austria e diventa capo dei Bolscevichi 
+
+[^3]: testi dicono passare potere ai soviet, uscire guerra, distribuire le terre

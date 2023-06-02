@@ -20,7 +20,7 @@
             - ***con ripetizione***
                 - possibili modi di riordinare $N$ elementi dove alcuni elementi si possono ripetere più volte
                 - Sia $f_{1}, f_{2}...f_{z}$ le frequenze con cui compare un certo elemento ($z$ = #{elementi distinti}), questo calcolo si fa:
-                - ${P_{n}}^{f_{1}, f_{2}...f_{z}} = \frac{n!}{f_{1}! * f_{2}! * ... * f_{z}!}$ 
+                - ${P'_{n}}^{f_{1}, f_{2}...f_{z}} = \frac{n!}{f_{1}! * f_{2}! * ... * f_{z}!}$ 
                 - Esempio: Anagrammi con lettere che si ripetono 
 
     - ## Disposizione:

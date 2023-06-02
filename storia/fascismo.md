@@ -58,7 +58,7 @@
     - Era $imperfetto \to$ non riesce a stabili pieno controllo sulla società italiana (c'era chiesa e re che avevano forte influenza) 
     - **Caratteristiche:**
         - Potere in mano al duce (Mussolini) $\to$ capo governo poteva emanare leggi senza approvazione del re
-        - no libertà (politica, stampa, ect...)
+        - no libertà (politica, stampa, etc...)
         - Viene costituzionalizzato il Gran Consiglio del Fascimo $\to$ poteva prepare la ***lista dei deputati*** [^4] 
         - ***Partito unico:*** sciolgono tutti i partiti tranne il PNF $\to$ gli impiegati dello Stato devono iscriversi al PNF
         - Vengono creati le ***Leggi Fascistissime***
@@ -120,7 +120,7 @@
 
 [^1]: era socialista ma essendo pro guerra, viene espulso
 [^2]: manganello e olio ricino (per rilassare = umiliare nemico)
-[^3]: spaventa i nemici e si inventa che la violenza era l'unica maniera per stabilire la pace in un momento di chaos
+[^3]: spaventa i nemici e si inventa che la violenza era l'unica maniera per stabilire la pace in un momento di chaos. Sa che non ha più nemici
 [^4]: chi stava camera deputati (faccio entrare chi è fascista)
 [^5]: c'era poi il tribunale normale che si occupa di reati normali (es: rubare)
 [^6]: Chiesa voleva dare educazione religiosa, Mussolini per guerra
