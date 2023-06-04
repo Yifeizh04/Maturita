@@ -29,4 +29,4 @@
     - Tramite UDP si può implementare multicast:
         - Il socket è un oggetto MulticastSocket 
         - ho un ip di gruppo ed entrano in questo gruppo facendo il join 
-        - il modo di comunicare è lo stesso dell'UDP
+        - il modo di comunicare è lo stesso dell'UDP 
