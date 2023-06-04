@@ -42,6 +42,7 @@
     - E' una teconlogia che ci consente di includere codice java all'interno di un codice HTML
     - Anche le JSP sono eseguiti all'interno di un container infatti quest'ultimo ha lo scopo di tradurre il JSP in servlet
     - Possiamo includere il JSP in un codice HTML utilizzando dei TAG come in PHP
+    - Esistono diversi tipi di TAG e vengono utilizzati in base a ciò che si deve fare, quindi alcuni servono per includere librerie, altre per inizializzare variabili, altri per includere codice che svolgono certe funzionalità
     
 - ## Differenze tra Servlet e JSP :
     - **JSP:**
