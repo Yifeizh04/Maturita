@@ -52,8 +52,6 @@
                 - l'utente non deve accorgersi del GUASTO e della RECOVERY della risorsa ${\to}$ servizio continua, al massimo è più lento rispondere (GUASTO PARZIALE). Due modi per attuare questa strategia:
                     - 1. Creare una ***macchina gemella***: uguale identica, ma costa di più però più efficiente
                     - 2. salvarsi le varie versioni così da poterli ripristinare (simile Git) (più lento, ma economico)
-            - **SCALABILITA':**
-                - se il sistema si espande, il sistema deve continuare a funzionare
 
 
 - ## ***Svantaggi***
