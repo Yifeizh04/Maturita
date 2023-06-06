@@ -10,10 +10,9 @@
     - ***Transfer control protocol***
     - E' una famiglia di protocolli che si basano sulla connessione orientata $\to$ si deve creare una connessione per comunicare $\to$ handshake 
     - il pacchetto che si manda si chiama segmento 
-    - È più sicuro perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto ack quando mando, se non ricevo niente, rimando 
+    - È più affidabile perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto che mi arrivi la conferma ricezione (ack) e se non mi arriva, rimando 
     - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
 - ## Implementazioni del TCP:
-    - In Java si usa la libreria "java.net.Socket"
     - Si istanzia il server con un oggetto SocketServer passando IP e porta
     - Poi si crea un oggetto Socket di cui invochiamo il metodo serverSocket.accept() per accettare le richieste dei client che vogliono comunicare
     - Il client deve conoscere l'IP e porta del server  
@@ -22,20 +21,19 @@
     
 - UDP:
     - ***User datagram protocol***
-    - È un protocollo ***connectionless*** cioè non serve fare handshake 🤝 (non bisogna stabilire la connessione per comunicare)
+    - È un protocollo ***connectionless*** (non bisogna stabilire la connessione per comunicare)
     - È più veloce del TCP perché non c'è il sistema stop and wait 
     - È meno affidabile perché non ho garanzia che arrivi ma faster
-    - Esempio: video streaming $\to$ più velocità, anche se non arrivano tutti i pacchetti, comunque non influisce (l'occhio non si accorge di qualche perdita del frame)
+    - Esempio: video streaming $\to$ serve più velocità, anche se non arrivano tutti i pacchetti, comunque non influisce (l'occhio non si accorge di qualche perdita del frame)
 - ## Implementazioni del UDP:
-    - In Java si usa la classe "java.net.DataGramSocket"
     - L'implementazione è uguale (per entrambi) solo che l'ordine cambia (prima client scrive, e poi sarà il server)
     - Per comunicare entrambi istanziano un DatagramSocket e per inviare usano un DatagramPacket. Quando si manda il messaggio, si inserisce il contenuto e l'IP + porta del destinatario. Colui che lo riceve, è in grado di ricavare l'IP e porta di colui che ha mandato 
     - receive (per fare get) e send (inviare)
 
     - Tramite UDP si può implementare multicast:
+        - Ci sono tanti client che sono connessi in un gruppo e il server quando invia un messaggio la gruppo, lo ricevono tutti del gruppo 
         - Il socket è un oggetto MulticastSocket 
         - ho un ip di gruppo ed entrano in questo gruppo facendo il join 
         - il modo di comunicare è lo stesso dell'UDP 
-        - solo il server manda i messaggi che verranno ricevuti dai client
 
 
