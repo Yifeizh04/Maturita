@@ -8,10 +8,9 @@
 
 - TCP:
     - ***Transfer control protocol***
-    - Sono dei protocolli che si basano sulla connessione orientata --> si deve creare una connessione per comunicare --> handshake 
+    - E' una famiglia di protocolli che si basano sulla connessione orientata $\to$ si deve creare una connessione per comunicare $\to$ handshake 
     - il pacchetto che si manda si chiama segmento ed ha un header di 20 byte (ci sono dei campi per controlli)
-    - È più sicuro perché garantisce che il pacchetto arrivi --> *stop and wait* 🛑 --> aspetto ack quando mando, se non ricevo niente, rimando 
-    - ### handshake 🤝(fase per stabilire la connessione inviandosi dei pacchetti)
+    - È più sicuro perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto ack quando mando, se non ricevo niente, rimando 
     - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
 - ## Implementazioni del TCP:
     - In Java si usa la classe "java.net.Socket"
