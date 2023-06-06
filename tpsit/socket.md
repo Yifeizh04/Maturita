@@ -1,17 +1,10 @@
 # Socket
 - ## Mini introduzione:
-    - Quando siamo in una struttura client server c'è il client sta usufruendo dei servizi che si basano su certi protocolli come HTTP. Generalmente questi protocolli lavorano nel 4 livello della pila ISO/OSI e quindi si basano sul TCP oppure UDP che si possono implementare tramite i socket.
+    - Quando siamo in una struttura client server c'è un client che usufruisce di un servizio che si basa su certi protocolli come HTTP. Generalmente questi protocolli lavorano nel 4 livello della pila ISO/OSI e quindi si basano sul TCP oppure UDP che si possono implementare tramite i socket.
 - ## Definizione
-    - Punto finale di una connessione di rete bidirezionale. E' un oggetto che rappresenta la connessione tra due computer
+    - Punto finale di una connessione bidirezionale 
 - ## Caratteristiche:
     - Composto da **IP** che identifica il PC nella rete, e dal numero **porta** che identifica l'applicazione che è in esecuzione su quel computer
-
-- ## Utilizzo:
-    - Generalmente viene utilizzato un'architettura **client-server** dove si deve creare una connessione tra due computer:
-        - server usufruisce dei servizi ai client o soddisfa le richieste fatte da quest'ultimi
-        - client richiede un servizio o dei dati dal server
-
-    - Vengono utilizzati nel TCP e nell'UDP 
 
 - TCP:
     - ***Transfer control protocol***
