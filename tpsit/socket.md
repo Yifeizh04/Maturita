@@ -13,19 +13,19 @@
     - È più sicuro perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto ack quando mando, se non ricevo niente, rimando 
     - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
 - ## Implementazioni del TCP:
-    - In Java si usa la classe "java.net.Socket"
-    - Prima si esegue il Server e poi si esegue i client
+    - In Java si usa la libreria "java.net.Socket"
     - Si istanzia il server con un oggetto SocketServer passando IP e porta
     - Poi si crea un oggetto Socket di cui invochiamo il metodo serverSocket.accept() per accettare le richieste dei client che vogliono comunicare
+    - Prima si esegue il Server e poi si esegue i client
     - Il client deve conoscere l'IP e porta del server  
     - Per comunicare entrambi usano un BufferReader e DataOutputStream per leggere e scrivere che devono essere connessi al socket 
 
 - UDP:
     - ***User datagram protocol***
-    - È un protocollo ***connectionless*** cioè non serve fare handshake 🤝 (stabilire la connessione)
+    - È un protocollo ***connectionless*** cioè non serve fare handshake 🤝 (non bisogna stabilire la connessione per comunicare)
     - Il PDU si chiama Datagram ed ha un header di 8 byte (< rispetto al TCP perché non ci sono campi controllo) 
-    - È più veloce del TCP perché non c'è il sistema stop and wait (aspetto ACK) 
-    - È meno affidabile perché non ho garanzia che arrivi (no ack)
+    - È più veloce del TCP perché non c'è il sistema stop and wait 
+    - È meno affidabile perché non ho garanzia che arrivi ma faster
     - Esempio: video streaming $\to$ più velocità, anche se non arrivano tutti i pacchetti, comunque non influisce (l'occhio non si accorge di qualche perdita del frame)
 - ## Implementazioni del UDP:
     - In Java si usa la classe "java.net.DataGramSocket"
