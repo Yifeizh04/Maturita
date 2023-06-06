@@ -6,20 +6,6 @@
 - ## Caratteristiche:
     - Composto da **IP** che identifica il PC nella rete, e dal numero **porta** che identifica l'applicazione che è in esecuzione su quel computer
 
-- TCP:
-    - ***Transfer control protocol***
-    - E' una famiglia di protocolli che si basano sulla connessione orientata $\to$ si deve creare una connessione per comunicare $\to$ handshake 
-    - il pacchetto che si manda si chiama segmento ed ha un header di 20 byte (ci sono dei campi per controlli)
-    - È più sicuro perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto ack quando mando, se non ricevo niente, rimando 
-    - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
-- ## Implementazioni del TCP:
-    - In Java si usa la libreria "java.net.Socket"
-    - Si istanzia il server con un oggetto SocketServer passando IP e porta
-    - Poi si crea un oggetto Socket di cui invochiamo il metodo serverSocket.accept() per accettare le richieste dei client che vogliono comunicare
-    - Prima si esegue il Server e poi si esegue i client
-    - Il client deve conoscere l'IP e porta del server  
-    - Per comunicare entrambi usano un BufferReader e DataOutputStream per leggere e scrivere che devono essere connessi al socket 
-
 - UDP:
     - ***User datagram protocol***
     - È un protocollo ***connectionless*** cioè non serve fare handshake 🤝 (non bisogna stabilire la connessione per comunicare)
@@ -38,3 +24,18 @@
         - ho un ip di gruppo ed entrano in questo gruppo facendo il join 
         - il modo di comunicare è lo stesso dell'UDP 
         - solo il server manda i messaggi che verranno ricevuti dai client
+
+- TCP:
+    - ***Transfer control protocol***
+    - E' una famiglia di protocolli che si basano sulla connessione orientata $\to$ si deve creare una connessione per comunicare $\to$ handshake 
+    - il pacchetto che si manda si chiama segmento ed ha un header di 20 byte (ci sono dei campi per controlli)
+    - È più sicuro perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto ack quando mando, se non ricevo niente, rimando 
+    - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
+- ## Implementazioni del TCP:
+    - In Java si usa la libreria "java.net.Socket"
+    - Si istanzia il server con un oggetto SocketServer passando IP e porta
+    - Poi si crea un oggetto Socket di cui invochiamo il metodo serverSocket.accept() per accettare le richieste dei client che vogliono comunicare
+    - Prima si esegue il Server e poi si esegue i client
+    - Il client deve conoscere l'IP e porta del server  
+    - Per comunicare entrambi usano un BufferReader e DataOutputStream per leggere e scrivere che devono essere connessi al socket 
+
