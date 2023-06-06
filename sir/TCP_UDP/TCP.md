@@ -1,4 +1,4 @@
-- ***Transfer control protocol ***
+- ***Transfer control protocol***
 - Sono dei protocolli che si basano sulla connessione orientata --> si deve creare una connessione per comunicare --> handshake 
 - il pacchetto che si manda si chiama segmento ed ha un header di 20 byte (ci sono dei campi per controlli)
 - È più sicuro perché garantisce che il pacchetto arrivi --> *stop and wait* 🛑 --> aspetto ack quando mando, se non ricevo niente, rimando 
@@ -9,7 +9,7 @@
 		- qui la connessione si è creata e risponde con un segmento con flag ack=1 
 	- Chiusura: 4 way handshake 
 		- Funzionamento simile al 3 way ma viene settato il flag fin = 1. 
-		- ==⚠️== per chiudere la connessione, serve che entrambi chiudono 
+		- ==⚠== per chiudere la connessione, serve che entrambi chiudono 
 - Protocolli: 
 	- HTTP:
 		- Hyper text transfer protocol ed è stato creato CERN nel 1980
