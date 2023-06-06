@@ -10,7 +10,7 @@
     - ***Transfer control protocol***
     - E' una famiglia di protocolli che si basano sulla connessione orientata $\to$ si deve creare una connessione per comunicare $\to$ handshake 
     - il pacchetto che si manda si chiama segmento 
-    - È più affidabile perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto che mi arrivi la conferma ricezione (ack) e se non mi arriva, rimando 
+    - È più affidabile perché garantisce che il pacchetto arrivi $\to$ *stop and wait* 🛑 $\to$ aspetto che mi arrivi un messaggio di conferma ricezione e se non mi arriva, rimando 
     - Esempio: chiamata $\to$ stabilire la connessione da entrambe le parti 
 - ## Implementazioni del TCP:
     - Si istanzia il server con un oggetto SocketServer passando IP e porta
@@ -26,9 +26,9 @@
     - È meno affidabile perché non ho garanzia che arrivi ma faster
     - Esempio: video streaming $\to$ serve più velocità, anche se non arrivano tutti i pacchetti, comunque non influisce (l'occhio non si accorge di qualche perdita del frame)
 - ## Implementazioni del UDP:
-    - L'implementazione è uguale (per entrambi) solo che l'ordine cambia (prima client scrive, e poi sarà il server)
-    - Per comunicare entrambi istanziano un DatagramSocket e per inviare usano un DatagramPacket. Quando si manda il messaggio, si inserisce il contenuto e l'IP + porta del destinatario. Colui che lo riceve, è in grado di ricavare l'IP e porta di colui che ha mandato 
-    - receive (per fare get) e send (inviare)
+    - L'implementazione è uguale sia per server e sia per client.
+    - Per comunicare entrambi istanziano un DatagramSocket e per inviare usano un DatagramPacket. Quando si manda il messaggio, si inserisce il contenuto e l'IP + porta del destinatario così che colui che lo riceve, è in grado di ricavare l'IP e porta del mittente 
+    - Per ricevere il pacchetto si usa il metodo receive e per inviare si usa send (inviare)
 
     - Tramite UDP si può implementare multicast:
         - Ci sono tanti client che sono connessi in un gruppo e il server quando invia un messaggio la gruppo, lo ricevono tutti del gruppo 
