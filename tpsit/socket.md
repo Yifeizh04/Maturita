@@ -1,6 +1,6 @@
 # Socket
 - ## Mini introduzione:
-    - Quando siamo in una struttura client server, il client sta usufruendo dei servizi che si basano su certi protocolli e questi protocolli, generalmente sono del 4 livello. Quindi si basano sul TCP e UDP che si possono implementare tramite i socket.
+    - Quando siamo in una struttura client server, il client sta usufruendo dei servizi che si basano su certi protocolli come HTTP, che generalmente lavorano nel 4 livello della pila ISO/OSI e quindi si basano sul TCP e UDP che si possono implementare tramite i socket.
 - ## Definizione
     - Punto finale di una connessione di rete bidirezionale. E' un oggetto che rappresenta la connessione tra due computer
 - ## Caratteristiche:
