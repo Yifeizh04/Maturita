@@ -17,7 +17,7 @@
     - Poi si crea un oggetto Socket di cui invochiamo il metodo serverSocket.accept() per accettare le richieste dei client che vogliono comunicare
     - Il client deve conoscere l'IP e porta del server  
     - Per comunicare entrambi usano un BufferReader e DataOutputStream per leggere e scrivere che devono essere connessi al socket 
-    - Prima si esegue il Server e poi si esegue i client
+    - Bisogna eseguire prima il Server e poi i client
     
 - UDP:
     - ***User datagram protocol***
