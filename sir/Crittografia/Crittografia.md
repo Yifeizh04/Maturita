@@ -19,7 +19,8 @@
            - Compresso il tutto, faccio la XOR con L. Quest'ultimo diventa il nuovo blocco R, e il vecchio blocco R diventa il nuovo blocco L. E si riesegue fiestel alternando (per comodità faccio swap(L, R) così lavoro solo con R)
     - Finito i 16 round, ripermuto nuovamente ed ho il nuovo messaggio 
  -  RSA 
-    - si scelgono due numeri primi $P$ e $Q$ e definiamo $N = P * Q$, e $\phi(N) = (P - 1) * (Q - 1)$
+    - Rivest, Shamir, Adleman
+    - si scelgono due numeri primi $P$ e $Q$ grandi e definiamo $N = P * Q$, e $\phi(N) = (P - 1) * (Q - 1)$
     - si sceglie un certo numero $E$ (chiave pubblica) dove:
        - E < $\phi(N)$  e gcd(E, $\phi(N)$) = 1 (comprimo) 
    - si sceglie $D$ tale che $(E*D) % \phi(N) = 1 \to$  $D$ è *l'inverso modulare*, oltre che essere chiave privata. Sappiamo che esiste questo inverso perché abbiamo scelto un certo $E$ tale che $gcd(E, \phi(N)) = 1$ 
