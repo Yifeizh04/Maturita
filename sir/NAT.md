@@ -1,6 +1,6 @@
 - network address translation $\to$ tradurre indirizzi IP 🌍
 - Perché è stato creato? Per navigare su internet, usiamo un identificativo univoco per distinguerci (si usa il nome cognome per riferirsi alla gente) che è IP. 
-     -  IP è una sequenza di 4 numeri che vanno da 0-255 $\to$ numero è un byte (8 bit $\to$ 2$^{8}$). Quest'ultimo serve per identificarci in una rete e può essere classificato per in 5 classi (si può capire la classe in base alla posizione del primo bit del primo byte da sx a dx):
+     -  IP è una sequenza di 4 numeri che vanno da 0-255 $\to$ numero è un byte (8 bit $\to$ $2^{8}$). Quest'ultimo serve per identificarci in una rete e può essere classificato per in 5 classi (si può capire la classe in base alla posizione del primo bit del primo byte da sx a dx):
                -   A, B, C (queste 3 vengono usati principalmente), D (multicast), E (scopi militari)
                -   pubblico (univoco nel mondo), privato (univoco nella sotto rete)
  - Essendo che sono pochi gli indirizzi pubblici in confronto al totale dei dispositivi al mondo, si usano gli IP privati $\to$ per comunicare mi serve pubblico $\to$ tradurre IP privato a pubblico.
